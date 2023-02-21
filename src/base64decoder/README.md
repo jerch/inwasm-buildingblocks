@@ -35,22 +35,6 @@ decoder.release();
 // next base64 data: new init|put|release cycle
 ```
 
-### Benchmark
-```text
-   Context "lib/base64decoder/base64.benchmark.js"
-      Context "Base64"
-         Context "Node - Buffer"
-            Case "decode - 256" : 100 runs - average throughput: 25.08 MB/s
-            Case "decode - 4096" : 100 runs - average throughput: 232.96 MB/s
-            Case "decode - 65536" : 100 runs - average throughput: 516.78 MB/s
-            Case "decode - 1048576" : 100 runs - average throughput: 551.90 MB/s
-         Context "Base64Decoder"
-            Case "decode - 256" : 100 runs - average throughput: 38.30 MB/s
-            Case "decode - 4096" : 100 runs - average throughput: 426.29 MB/s
-            Case "decode - 65536" : 100 runs - average throughput: 1155.06 MB/s
-            Case "decode - 1048576" : 100 runs - average throughput: 1395.79 MB/s
-```
-
 
 ### TODO
 - more user friendly interface
