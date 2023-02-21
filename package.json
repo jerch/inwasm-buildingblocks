@@ -1,0 +1,25 @@
+{
+  "name": "inwasm-buildingblocks",
+  "version": "0.0.1",
+  "description": "Some micro libraries built with inwasm.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha lib/*/*.test.js",
+    "tsc": "tsc",
+    "watch": "tsc -w & inwasm -w 'lib/*/*.wasm.js' & wait",
+    "prepublish": "npm run build",
+    "inwasm": "inwasm lib/*/*.wasm.js",
+    "clean": "rm -rf lib dist inwasm-builds",
+    "build": "npm run tsc && npm run inwasm",
+    "benchmark": "xterm-benchmark lib/*/*.benchmark.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^16.11.43",
+    "inwasm": "^0.0.5",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "xterm-benchmark": "^0.3.1"
+  }
+}
